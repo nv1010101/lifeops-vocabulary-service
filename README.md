@@ -36,3 +36,57 @@ This service is integrated through Platform Core connector runtime and must:
 
 - lifecycle: `planned`
 - module_id: `vocabulary`
+
+## Stack
+
+- Runtime: Node.js LTS
+- Language: TypeScript
+- API framework: Fastify
+- Persistence: SQLite (introduced in the persistence slice)
+- Tests: Vitest + Supertest
+
+## Local Setup
+
+Install dependencies:
+
+```bash
+make install
+```
+
+Create a local environment file:
+
+```bash
+cp .env.example .env
+```
+
+Run the service:
+
+```bash
+make run
+```
+
+The health endpoint must return exactly:
+
+```json
+{"status":"ok"}
+```
+
+## Verification
+
+Run tests:
+
+```bash
+make test
+```
+
+Run lint checks:
+
+```bash
+make lint
+```
+
+Run TypeScript type checks:
+
+```bash
+make build
+```

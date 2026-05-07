@@ -13,13 +13,23 @@ Thumbs.db
 
 # Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
 
 # Generic build artifacts
 build/
 dist/
 out/
 coverage/
+.vite/
 .tmp/
 tmp/
 
-/specs
+# Project-specific local directories
+specs/
+skills/
+temp/
